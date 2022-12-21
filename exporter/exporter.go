@@ -138,6 +138,7 @@ func NewRedisExporter(redisURI string, opts Options) (*Exporter, error) {
 			"allocator_rss_ratio":  "allocator_rss_ratio",
 			"allocator_rss_bytes":  "allocator_rss_bytes",
 
+			"comitted_memory":          "comitted_memory_bytes",
 			"used_memory":              "memory_used_bytes",
 			"used_memory_rss":          "memory_used_rss_bytes",
 			"used_memory_peak":         "memory_used_peak_bytes",
@@ -213,6 +214,9 @@ func NewRedisExporter(redisURI string, opts Options) (*Exporter, error) {
 			"tracking_total_keys":     "tracking_total_keys",
 			"tracking_total_items":    "tracking_total_items",
 			"tracking_total_prefixes": "tracking_total_prefixes",
+                        "defrag_attempt_total":    "defrag_attempt_total",
+                        "defrag_realloc_total":    "defrag_realloc_total",
+                        "defrag_task_invocation_total": "defrag_task_invocation_total",
 
 			// # Replication
 			"connected_slaves":               "connected_slaves",
